@@ -8,15 +8,71 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dream to me</h1>
-        <p>тут будет какое-то описание или картинки лол</p>
+        <h1>
+            <img src="images/chuuya.png" alt="Icon" class="title-icon">
+            Dream to me</h1>
+        
+        <!-- Обложка (замените название файла на свой) -->
+        <img src="images/cover.jpg" alt="Обложка игры" class="cover-image" onerror="this.style.display='none'">
+        
+        <p>Dream to me — визуальная новелла с персонажами из bungou stray dogs(бсд) с невероятно захватывающим и ultra pro умопомрачительным сюжетом про то, как рыжий мальчик Чуня во снах попадает в различные вселенные. В каждых из них, он встречает парня по имени Даня, с которым ему предстоит разгадывать загадки измерений.</p><i> Сможет ли Чуня выйти из цикла вселенных,если сны с Даней становятся важнее реальности?</i>
+        <!-- Социальные сети -->
+    
+        <!-- Скриншоты -->
+        <h2>Скриншоты-_-</h2>
+        <div class="screenshots">
+            <img src="images/screen1.png" alt="Скриншот 1" onclick="openModal(this)" onerror="this.style.display='none'">
+            <img src="images/screen3.png" alt="Скриншот 2" onclick="openModal(this)" onerror="this.style.display='none'">
+            <img src="images/screen4.png" alt="Скриншот 3" onclick="openModal(this)" onerror="this.style.display='none'">
+            
+        </div>
 
+    
+
+        <!-- Кнопки скачивания -->
         <h2>Скачать игру</h2>
         <div class="download-links">
-            <a href="https://drive.google.com/drive/folders/1eOLlLgCjjUODIBWxoGj4OuGF4Y87FHgo?usp=drive_link" class="button">Скачать</a>
-           
+            <a href="https://drive.google.com/drive/folders/1KpjhCwqhUSSaONfJbrcGCU9h4s6vfn1g?usp=drive_link" class="button windows">Скачать для Видус</a>
+            <a href="https://drive.google.com/drive/folders/1x06zxaoNevjNNUBbhA8sPo0bYzjNLAol?usp=drive_link" class="button mac">Скачать для macOS(макаки)</a>
+            <a href="https://drive.google.com/drive/folders/1EI9B2HXz8iiVkfVtJAKSZuMcUwpLp7Tp?usp=drive_link" class="button android">Скачать для Androед</a>
         </div>
         <p class="note"> Для установки APK на Android разрешите установку из неизвестных источников в настройках телефона.</p>
+        <div class="social-links">
+            <a href="https://vk.ru/club237226559" class="social-btn vk" target="_blank">ВКонтакте</a>
+            <a href="https://t.me/DreamToMe" class="social-btn telegram" target="_blank">Telegram</a>
+            </div>
+        <!-- Футер -->
+        <footer class="footer">
+            
+            <p>© 2026 Dream to me. Все права защищены. Мной.</p>
+            <p>Мяу мяу мяу</p>
+            
+        </footer>
     </div>
+
+    <!-- Модальное окно для увеличения скриншотов -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" class="modal-content">
+    </div>
+
+    <script>
+    function openModal(img) {
+        var modal = document.getElementById('modal');
+        var modalImg = document.getElementById('modal-img');
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = "none";
+    }
+    
+    // Закрытие по клавише Esc
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+    </script>
 </body>
 </html>
